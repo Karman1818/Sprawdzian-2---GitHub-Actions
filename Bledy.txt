@@ -19,3 +19,32 @@ PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 Time: 53ms; Memory: 8MB
 Script phpcs --standard=PSR12 src public tests handling the lint event returned with error code 2
 Error: Process completed with exit code 2.
+
+2.
+Run mkdir -p build
+  mkdir -p build
+  composer test:junit
+  shell: /usr/bin/bash -e {0}
+  env:
+    COMPOSER_PROCESS_TIMEOUT: 0
+    COMPOSER_NO_INTERACTION: 1
+    COMPOSER_NO_AUDIT: 1
+  
+PHPUnit 11.5.55 by Sebastian Bergmann and contributors.
+Runtime:       PHP 8.3.31
+.F                                                                  2 / 2 (100%)
+Time: 00:00.012, Memory: 10.00 MB
+There was 1 failure:
+1) Tests\AppTest::testHealthReturnsOk
+Failed asserting that two strings are identical.
+--- Expected
++++ Actual
+@@ @@
+-'ok'
++'healthy'
+/home/runner/work/Sprawdzian-2---GitHub-Actions/Sprawdzian-2---GitHub-Actions/tests/AppTest.php:23
+FAILURES!
+Tests: 2, Assertions: 2, Failures: 1.
+Script phpunit --colors=never --log-junit build/junit.xml tests handling the test:junit event returned with error code 1
+Error: Process completed with exit code 1.
+

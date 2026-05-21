@@ -20,6 +20,6 @@ final class AppTest extends TestCase
     {
         $app = new App();
 
-        self::assertSame('ok', $app->health());
+        self::assertSame('healthy', $app->health());
     }
 }
