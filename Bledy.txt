@@ -61,3 +61,10 @@ Error: Process completed with exit code 7.
 
 TU BYLO pubic 
 CMD ["php", "-S", "0.0.0.0:8080", "-t", "public"]
+
+4.
+Run docker compose up -d --build
+  docker compose up -d --build
+  shell: /usr/bin/bash -e {0}
+service "web" depends on undefined service "db": invalid compose project
+Error: Process completed with exit code 1.
