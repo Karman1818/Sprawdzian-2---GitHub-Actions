@@ -48,3 +48,9 @@ Tests: 2, Assertions: 2, Failures: 1.
 Script phpunit --colors=never --log-junit build/junit.xml tests handling the test:junit event returned with error code 1
 Error: Process completed with exit code 1.
 
+3.
+Run curl -fsS http://localhost:8080/health
+  curl -fsS http://localhost:8080/health
+  shell: /usr/bin/bash -e {0}
+curl: (7) Failed to connect to localhost port 8080 after 0 ms: Couldn't connect to server
+Error: Process completed with exit code 7.
