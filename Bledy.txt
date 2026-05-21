@@ -1,0 +1,21 @@
+1.
+Run composer lint
+  composer lint
+  shell: /usr/bin/bash -e {0}
+  env:
+    COMPOSER_PROCESS_TIMEOUT: 0
+    COMPOSER_NO_INTERACTION: 1
+    COMPOSER_NO_AUDIT: 1
+  
+FILE: ...rk/Sprawdzian-2---GitHub-Actions/Sprawdzian-2---GitHub-Actions/src/App.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 9 | ERROR | [x] There must be a single space between the colon and type in a
+   |       |     return type declaration
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+Time: 53ms; Memory: 8MB
+Script phpcs --standard=PSR12 src public tests handling the lint event returned with error code 2
+Error: Process completed with exit code 2.

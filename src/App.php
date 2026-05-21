@@ -11,7 +11,7 @@ final class App
         return 'hello from php app';
     }
 
-    public function health(): string
+    public function health():string
     {
         return 'healthy';
     }
